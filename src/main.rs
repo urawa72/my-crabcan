@@ -3,6 +3,7 @@ use std::process::exit;
 #[macro_use] extern crate scan_fmt;
 mod cli;
 mod config;
+mod ipc;
 mod container;
 mod errors;
 
