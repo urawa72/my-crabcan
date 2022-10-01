@@ -9,7 +9,7 @@ pub fn generate_socketpair() -> Result<(RawFd, RawFd), Errcode> {
         AddressFamily::Unix,
         SockType::SeqPacket,
         None,
-        SockFlag::SOCK_CLOSEXEC,
+        SockFlag::SOCK_CLOEXEC,
     )
     .map(|res| res)
     .map_err(|_| Errcode::SocketError(0))

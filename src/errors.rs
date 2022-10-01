@@ -5,6 +5,7 @@ use crate::container::MINIMAL_KERNEL_VERSION;
 #[derive(Debug)]
 pub enum Errcode {
     ContainerError(u8),
+    ChildProcessError(u8),
     NotSupported(u8),
     ArgumentInvalid(&'static str),
     SocketError(u8)

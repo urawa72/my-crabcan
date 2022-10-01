@@ -1,11 +1,14 @@
 use std::process::exit;
 
-#[macro_use] extern crate scan_fmt;
+#[macro_use]
+extern crate scan_fmt;
+
+mod child;
 mod cli;
 mod config;
-mod ipc;
 mod container;
 mod errors;
+mod ipc;
 
 use crate::errors::exit_with_retcode;
 
